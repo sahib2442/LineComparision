@@ -5,18 +5,19 @@ namespace LineComparision
     {
         static void main(string[]args)
         {
-            LineComparision lineComProblem = new LineComparision(1,2,3,4)
-            double line1 = lineComProblem.CalculateLength();
+            Comparision comparision = new Comparision(1,2,3,4)
+            double line1 = comparision.CalculateLength();
             Console.WriteLine("length of the first line" + line1);
-            LineCompProblem lineCompProblem2 = new LineCompProblem(1, 2, 3, 4);
-            double line2 = lineComProblem.CalculateLength();
-            if (line1 == line2)
-            {
-                Console.WriteLine("line1 is equal to line2");
-            }
+            Comparision lineComparision = new Comparision(1, 2, 3, 4);
+            double line2 = lineComparision.CalculateLength();
+            Console.WriteLine("lengrt of second line" + line2);
+            if (line1.CompareTo(line2) == 0)
+                Console.WriteLine("Both line are same");
+            if (line1.CompareTo(line2) > 0)
+                Console.WriteLine("line1 is greater then line2");            
             else
             {
-                Console.WriteLine("line1 is not equal to line2");
+                Console.WriteLine("line2 is greater then line1");
             }
         }
     }
